@@ -65,7 +65,7 @@ body {
 .converter-shell {
   grid-column: 3;
   width: 100%;
-  margin: 30px 50px 150px 150px;
+  margin: 30px 50px 150px 70px;
 }
 
 #calcCanvas {
