@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>rookieCalculator</title>
+    <link rel="stylesheet" href="/frontend/style.css" />
+  </head>
+  <body>
+    <canvas id="backgroundCanvas" aria-hidden="true"></canvas>
+
+    <main class="page-shell">
+      <section class="calculator-shell" aria-label="Scientific calculator">
+        <canvas id="calcCanvas" width="560" height="840"></canvas>
+      </section>
+
+      <section class="converter-shell" aria-label="Unit converter">
+        <div class="converter-panel" id="converterPanel">
+          <div class="converter-header">
+            <p class="eyebrow">Unit Converter</p>
+            <p>Convert measurements between length, mass, time, temperature, and more.</p>
+          </div>
+
+          <label class="field">
+            <span>Value</span>
+            <input
+              id="converterValue"
+              type="text"
+              inputmode="decimal"
+              autocomplete="off"
+              spellcheck="false"
+              placeholder="Enter a value"
+            />
+          </label>
+
+          <label class="field">
+            <span>Category</span>
+            <select id="converterCategory"></select>
+          </label>
+
+          <div class="converter-grid">
+            <label class="field">
+              <span>From</span>
+              <select id="converterSource"></select>
+            </label>
+
+            <button id="converterSwap" class="swap-button" type="button" aria-label="Swap units">
+              ⇄
+            </button>
+
+            <label class="field">
+              <span>To</span>
+              <select id="converterTarget"></select>
+            </label>
+          </div>
+
+          <div class="result-card">
+            <span>Result</span>
+            <output id="converterResult">—</output>
+            <small id="converterStatus">Select a category and units.</small>
+          </div>
+
+          <button id="converterConvert" class="convert-button" type="button">Convert</button>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="/frontend/app.js"></script>
+    <script type="module" src="/frontend/bootstrap.js"></script>
+  </body>
+</html>
